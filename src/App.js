@@ -74,9 +74,10 @@ onButtonSubmit = () =>{
     .catch(err => console.log(err));
 }
 
-onRouteChange = (route) => {
-  this.setState = ({route})
-  
+onRouteChange = ({route})=>{
+  this.setState({route});
+  console.log({route});
+  console.log(this.state.route);
 }
 
 
@@ -90,7 +91,7 @@ onRouteChange = (route) => {
         
         { this.state.route === "home" 
           ?
-          <div>
+          <>
               <Logo/>
               <Rank/>
               <ImageLinkForm 
@@ -101,7 +102,7 @@ onRouteChange = (route) => {
                 box = {this.state.box} 
                 imageUrl = {this.state.imageUrl}
               />
-          </div>
+          </>
           : (
             this.state.route === "signin"
             ? <Signin onRouteChange = {this.onRouteChange}/>
