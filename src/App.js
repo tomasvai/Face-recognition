@@ -11,6 +11,7 @@ import Rank from "./components/Rank/Rank";
 import Particles from 'react-particles-js';
 
 
+
 const app = new Clarifai.App({
   apiKey: '6ccfe2f391c5433386488a9f0d77b06c'
  });
@@ -74,8 +75,10 @@ onButtonSubmit = () =>{
 }
 
 onRouteChange = (route) => {
-  this.setState = ({route: route})
+  this.setState = ({route})
+  
 }
+
 
   render() {
     return (
